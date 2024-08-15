@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr>
+    <form method="POST">{% csrf_token %}
+        <lable> Pin.No:</lable>
+        <input name="pinno" id="n1" type="name" placeholder="enter a number" required>
+        <br><br><button>submit</button>
+
+    <table border="2">
+    <tr>
+        <td><b> Name of the student</b></td>
+        <td><b> PIN.NO</b></td>
+        <td><b> No. of Passed Sub</b></td>
+        <td><b> No. of failed sub</b></td>
+        <td><b> Attendence</b></td>
+    </tr>
+    <tr>
+     {% if pinno %}
+        <td>{{ name }}</td>
+        <td>{{ pinno }}</td>
+        <td>{{ passsub }}</td>
+        <td>{{ failsub }}</td>
+        <td>{{ attendence }}</td>
+        <hr>
+    {% else %}
+  
+        <h4>Your are failed!</h4> 
+    
+    {% endif %}
+    </tr>
+     </table> 
+    </form>
+</body>
+</html>

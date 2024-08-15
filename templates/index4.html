@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Greater numbers</h1>
+    <hr>
+    <form method="POST">{% csrf_token %}
+        <lable> Number1:</lable>
+        <input name="num1" id="n1" type="number" placeholder="enter a number" required>
+        <lable> Number2:</lable>
+        <input name="num2" id="n2" type="number" placeholder="enter a number" required>
+        <br><br><button>submit</button>
+    </form>
+    {% if res %}
+    <h1> Number1 is greater than Number2</h1>
+    {% else %}
+    <h2>  Number2 is greater than Number1</h2>
+    {% endif %}
+</body>
+</html>
